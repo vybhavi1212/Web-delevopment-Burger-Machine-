@@ -8,8 +8,15 @@ def process_array(num, arr):
     print("\nProcessing Array({}): \n\n".format(num))
     print(arr)
     print("\nPositive Output:\n")
-    # TODO add new code here to print the desired result
+    poss_vals = []
+    for i in arr:
+        if type(i) is str:
+            poss = i.replace("-", '')
+        else:
+            poss=abs(i)
+        poss_vals.append(poss)
 
+    print(poss_vals)
 
 print("Problem 3")
 process_array(1, a1)
