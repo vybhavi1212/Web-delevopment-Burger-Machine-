@@ -9,11 +9,15 @@ def process_array(num, arr):
     print(arr)
     print("\nOdds output:\n")
     # TODO add necessary print statement to output only the odd values (hint, best if shown as a single line)
-    odd_vals = []
-    for i in arr:
-       if i % 2 != 0:
-         odd_vals.append(i)
-    print(odd_vals)
+    def process_array(num, arr):
+        print("\nProcessing Array({}): \n\n".format(num))
+        print(arr)
+        print("\nOdds output:\n")
+        odd_vals = []
+        for i in arr:
+            if i % 2 != 0:
+                odd_vals.append(i)
+        print(odd_vals)
 
 
 print("Problem 1")
