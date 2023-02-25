@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> IS601 - Mini Project 1 - Tracker App</td></tr>
 <tr><td> <em>Student: </em> Vybhavi Chithapuram (vc435)</td></tr>
-<tr><td> <em>Generated: </em> 2/21/2023 5:14:48 PM</td></tr>
+<tr><td> <em>Generated: </em> 2/24/2023 11:04:00 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IS601-006-S23/is601-mini-project-1-tracker-app/grade/vc435" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol><li>Checkout dev branch and pull any pending changes&nbsp;</li><ol><li>&nbsp;git checkout dev</li><li>&nbsp;git pull origin dev</li></ol><li>Create a new branch for this assignment (see Desired Branch Name)</li><ol><li>git checkout -b MP1-Tracker</li></ol><li>Create a new folder called MP1 in your local repository</li><li>Create a new file called tracker.py</li><li>Copy/paste the content from this template:&nbsp;&nbsp;<a href="https://gist.github.com/MattToegel/380e6baa24f6c25b74bf2ce99ccba6da">https://gist.github.com/MattToegel/380e6baa24f6c25b74bf2ce99ccba6da</a></li><li>Add/commit/push the template file</li><ol><li>git add --all</li><li>git commit -m "adding template"</li><li>git push origin MP1-Tracker</li></ol><li>Create a pull request from MP1-Tracker to dev (keep it open, do not close it until you're done)</li><li>Solve the various todo items (also noted below in the deliverables) and fill in the evidence</li><ol><li>Periodically add/commit; recommended after each solved item or every few items</li></ol><li>Save and copy/download the markdown</li><li>Create a new file mp1-submission.md in the MP1 folder</li><li>Add the markdown content</li><li>add/commit/push all the pending files for this assignment (tracker.py and mp1-submission.md)</li><li>If everything looks good on the pull request complete the merge</li><li>Create a new pull request from dev to prod and merge it to update prod (not used yet but you want to keep this up to date)</li><li>checkout dev locally and pull the changes to be up to date</li><li>Navigate to the prod branch on github and find the mp1-submission.md file and get the link to the file to submit to canvas</li></ol></td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> Add Task Logic </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
@@ -10,7 +10,7 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of add_task()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220464680-935f45bd-5ceb-4384-9a79-f3a29195af00.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221296447-9fdff0d7-5b97-4682-937b-91de9af64a1f.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>new task green has been added and also  invalid values lead to<br>failure of adding the task<br></p>
 </td></tr>
 </table></td></tr>
@@ -19,7 +19,7 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 2: </em> Process Update Logic </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot(s) of the edited process_update() function</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220444594-9fcb5224-c7f8-4ce6-941a-d2aa412fa3e4.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221294710-7b9e1e6a-0f3e-403c-9806-cca159523dad.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>process update stores tasks in an index, which is used to locate tasks<br>that need to be updated and later updates.<br></p>
 </td></tr>
 </table></td></tr>
@@ -33,7 +33,7 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of update_task()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220463959-f80577e8-0f49-459a-8436-69330c082d98.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221298719-e74313ea-cc1c-4be9-9559-55cdb0509d49.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>named has been updated to tree and also failure of invalid task .<br></p>
 </td></tr>
 </table></td></tr>
@@ -42,12 +42,12 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 4: </em> Mark Task Done/Complete Logic </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot(s) of the edited mark_done() function</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220445060-ab7d88ad-367d-4516-8fef-6599a12b96e9.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221295062-f2f9645d-230c-42f8-b090-455353464227.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>mark done tells if  the task is completed it displays task is<br>already completed else invalid index number<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of mark_done()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220465702-a7f84541-6783-4b01-ab4b-a60b3aa05d6d.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221298935-179f139a-010a-4fef-9a32-6559428072ab.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>completed the task by giving 1st number from the list and for the<br>invalid task t shows error.<br></p>
 </td></tr>
 </table></td></tr>
@@ -56,16 +56,13 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 5: </em> View Task Logic (and list) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot(s) of the edited view_task() function</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220445227-10ee80c9-3230-4b7d-a65d-a10b83b186ea.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221295213-1d7c1a63-1b8e-40a3-ad24-4f4fe07bdc62.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>view task function has all the information of a particular task and displays<br>all the tasks details from the list.<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of view_task()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220253779-a4d1cb74-1778-47df-b5f5-2a13960d7c08.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>Task, Description, Last Activity, Due, Completed date are displayed<br></p>
-</td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220466114-be89b75e-9089-4e26-b78b-8196655fdf17.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>when invalid task is entered it shows error.<br></p>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221299380-c99b111d-3528-455d-a00a-50385d8d6488.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>Task, Description, Last Activity, Due, Completed date are displayed and in failure case<br>when invalid task is entered it shows error.<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Add screenshot(s) of list_tasks() output showing a few examples</td></tr>
@@ -81,11 +78,8 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of delete_task()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220218689-815fc5b0-87ba-4d50-8f79-55200a7c7806.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>deleted task succesfully<br></p>
-</td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220466702-91e3589a-8048-4f98-a2db-ff01fb70998c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>invalid task entered and the deletion failed.<br></p>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221299768-f3150615-8d9f-40ff-af42-6ce9175eb0af.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>output displaying deleted task successfully and failure case when invalid task in entered.<br><br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Briefly explain the solutions to the checklist items for delete_task()</td></tr>
@@ -98,8 +92,11 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of get_incomplete_tasks()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220392761-de915725-5bea-46b8-bd19-b139eb83d88d.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>list of the tasks which are incomplete are shown below<br></p>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221332392-cb6e83d4-1deb-480c-b2e9-1483f65274b0.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>output of the tasks which are incomplete are shown<br></p>
+</td></tr>
+<tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221332310-13012c44-7220-4345-972d-1f9ea9522b54.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>list of the tasks which are done and give failure output is displayed<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Briefly explain the solutions to the checklist items for get_incomplete_tasks()</td></tr>
@@ -112,7 +109,7 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of get_overdue_tasks()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220454295-a68c80ea-d529-4858-8e3c-312926b4c4ca.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221332540-82ab1826-4b64-47cd-afcc-1debb3ae918c.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>tasks 2 to 11 are overdue with mentioned values <br></p>
 </td></tr>
 </table></td></tr>
@@ -126,29 +123,27 @@
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of get_time_remaining()</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220219849-b7eac3de-69e7-461b-9d51-0cee91a0a01f.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>output showing the time remaining task and also the failure<br></p>
-</td></tr>
-<tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220255246-0a96fda6-356a-49ca-a2cd-97ba97fbdb62.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>the time remaining for task 3 from the list is Over due by:<br>1 days, 18 hours, 20 minutes, 31 seconds.<br></p>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221334399-ac278354-e617-4dd7-9ef8-6a86edab9467.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>the time remaining for task 3 from the list is Over due by:<br>1 days, 18 hours, 20 minutes, 31 seconds and also failure when invalid<br>index is given as input.<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Briefly explain the solutions to the checklist items for get_time_remaining()</td></tr>
 <tr><td> <em>Response:</em> <div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;,<br>monospace; line-height: 19px; white-space: pre;"><span style="color: #c586c0;">if</span> <span style="color: #9cdcfe;">index</span> &lt; <span style="color:<br>#b5cea8;">0</span> <span style="color: #569cd6;">or</span> <span style="color: #9cdcfe;">index</span> &gt; <span style="color: #dcdcaa;">len</span>(<span style="color: #9cdcfe;">tasks</span>):<span<br>style="color: #6a9955;"># to find if the index is within the bound</span></div><div style="color: rgb(212,<br>212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; line-height: 19px;<br>white-space: pre;"><div style="line-height: 19px;"><span style="color: #dcdcaa;">print</span>(<span style="color: #ce9178;">"Index is out of range or<br>invalid. Please try again"</span>)</div></div><div style="color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family:<br>Consolas, &quot;Courier New&quot;, monospace; line-height: 19px; white-space: pre;"><div style="line-height: 19px;"><div><span style="color: #c586c0;">else</span>:</div><div>&nbsp; &nbsp;<br>&nbsp; &nbsp; <span style="color: #9cdcfe;">task</span> = <span style="color: #9cdcfe;">tasks</span>[<span style="color: #9cdcfe;">index</span>] <span style="color:<br>#6a9955;">#gets the task by index</span></div><div><div style="line-height: 19px;">    &nbsp;<span style="color: #9cdcfe;">task_due_datetime</span><br>= <span style="color: #dcdcaa;">str_to_datetime</span>(<span style="color: #9cdcfe;">task</span>[<span style="color: #ce9178;">'due'</span>]) <span style="color: #6a9955;">#feteches the difference<br>between &nbsp;due date time and now</span></div></div><div style="line-height: 19px;"><div style="line-height: 19px;"><div><span style="color: #9cdcfe;"> <br>      days</span>, <span style="color: #9cdcfe;">hours</span>, <span style="color: #9cdcfe;">minutes</span>,<br><span style="color: #9cdcfe;">seconds</span> = <span style="color: #dcdcaa;">format_time_diff</span>(<span style="color: #dcdcaa;">diff_in_secs</span>(</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; <span style="color: #9cdcfe;">task_due_datetime</span>, <span style="color: #4ec9b0;">datetime</span>.<span style="color: #dcdcaa;">now</span>()))</div><div><div style="line-height: 19px;"><span style="color: #c586c0;">if</span><br>(<span style="color: #9cdcfe;">task_due_datetime</span> &gt; <span style="color: #4ec9b0;">datetime</span>.<span style="color: #dcdcaa;">now</span>()):<span style="color: rgb(106, 153, 85);">#shows<br>the time remaining using print in days, hours, minutes , seconds</span></div></div><div style="line-height: 19px;"><div<br>style="line-height: 19px;"><div><span style="color: #dcdcaa;">print</span>(</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:<br>#569cd6;">f</span><span style="color: #ce9178;">'''</span><span style="color: #d7ba7d;">\n</span><span style="color: #ce9178;">Remaining time: </span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">days</span><span<br>style="color: #569cd6;">}</span><span style="color: #ce9178;"> days, </span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">hours</span><span style="color: #569cd6;">}</span><span style="color:<br>#ce9178;"> hours, </span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">minutes</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;"> minutes, </span><span<br>style="color: #569cd6;">{</span><span style="color: #9cdcfe;">seconds</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;"> seconds'''</span>)</div><div>&nbsp; &nbsp; &nbsp; &nbsp; <span<br>style="color: #c586c0;">else</span>:</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #dcdcaa;">print</span>(</div><div>&nbsp; &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #569cd6;">f</span><span style="color: #ce9178;">'''</span><span style="color: #d7ba7d;">\n</span><span style="color: #ce9178;">Over<br>due by: </span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">days</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;"> days, </span><span<br>style="color: #569cd6;">{</span><span style="color: #9cdcfe;">hours</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;"> hours, </span><span style="color: #569cd6;">{</span><span style="color:<br>#9cdcfe;">minutes</span><span style="color: #569cd6;">}</span><span style="color: #ce9178;"> minutes, </span><span style="color: #569cd6;">{</span><span style="color: #9cdcfe;">seconds</span><span style="color: #569cd6;">}</span><span<br>style="color: #ce9178;"> seconds'''</span>)</div></div></div><div><div style="line-height: 19px;"><div><span style="color: #6a9955;">#The remaining time is calculated by finding<br>the difference betweern the current date and time and the due date time<br>of the task</span></div><div>&nbsp; &nbsp; &nbsp; &nbsp; and <span style="color: #6a9955;">it is coverted into<br>days, hours , minutes and seconds using divmod function.</span></div></div></div></div></div></div></div><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 10: </em> Misc </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707834-bf5a5b13-ec36-4597-9741-aa830c195be2.png"></td></tr>
+<table><tr><td> <em>Deliverable 10: </em> Misc </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add screenshot(s) of program output generated from filling in this deliverable (or close to it)</td></tr>
-<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/220448954-6c5cb212-d6fe-48bb-bb3d-57dec0ffcf44.png"/></td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221335065-47f0afb3-2f87-40e8-ac0c-23db1a6ab4d7.png"/></td></tr>
 <tr><td> <em>Caption:</em> <p>tasks are been added, and checked if the tasks are completed, next they<br>are listed and the incomplete tasks are displayed.<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) of the saved JSON file</td></tr>
-<tr><td><table><tr><td>Missing Image</td></tr>
-<tr><td> <em>Caption:</em> (missing)</td></tr>
+<tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221334813-33d4bb8c-1a17-4386-88cd-9cd18de1120f.png"/></td></tr>
+<tr><td> <em>Caption:</em> <p>adding json file<br></p>
+</td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Discuss any issues and how they were overcome or learnings from this project</td></tr>
-<tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
+<tr><td> <em>Response:</em> <p>no issues<br></p><br></td></tr>
 <tr><td> <em>Sub-Task 4: </em> Add pull request for this assignment (project branch to dev)</td></tr>
-<tr><td>Not provided</td></tr>
+<tr><td> <a rel="noreferrer noopener" target="_blank" href="https://github.com/vybhavi1212/IS601-006/pull/7">https://github.com/vybhavi1212/IS601-006/pull/7</a> </td></tr>
 </table></td></tr>
-<table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IS601-006-S23/is601-mini-project-1-tracker-app/grade/vc435" target="_blank">Grading</a></td></tr></table>git
+<table><tr><td><em>Grading Link: </em><a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IS601-006-S23/is601-mini-project-1-tracker-app/grade/vc435" target="_blank">Grading</a></td></tr></table>
