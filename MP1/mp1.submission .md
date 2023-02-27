@@ -1,6 +1,6 @@
 <table><tr><td> <em>Assignment: </em> IS601 - Mini Project 1 - Tracker App</td></tr>
 <tr><td> <em>Student: </em> Vybhavi Chithapuram (vc435)</td></tr>
-<tr><td> <em>Generated: </em> 2/24/2023 11:04:00 PM</td></tr>
+<tr><td> <em>Generated: </em> 2/24/2023 11:18:16 PM</td></tr>
 <tr><td> <em>Grading Link: </em> <a rel="noreferrer noopener" href="https://learn.ethereallab.app/homework/IS601-006-S23/is601-mini-project-1-tracker-app/grade/vc435" target="_blank">Grading</a></td></tr></table>
 <table><tr><td> <em>Instructions: </em> <ol><li>Checkout dev branch and pull any pending changes&nbsp;</li><ol><li>&nbsp;git checkout dev</li><li>&nbsp;git pull origin dev</li></ol><li>Create a new branch for this assignment (see Desired Branch Name)</li><ol><li>git checkout -b MP1-Tracker</li></ol><li>Create a new folder called MP1 in your local repository</li><li>Create a new file called tracker.py</li><li>Copy/paste the content from this template:&nbsp;&nbsp;<a href="https://gist.github.com/MattToegel/380e6baa24f6c25b74bf2ce99ccba6da">https://gist.github.com/MattToegel/380e6baa24f6c25b74bf2ce99ccba6da</a></li><li>Add/commit/push the template file</li><ol><li>git add --all</li><li>git commit -m "adding template"</li><li>git push origin MP1-Tracker</li></ol><li>Create a pull request from MP1-Tracker to dev (keep it open, do not close it until you're done)</li><li>Solve the various todo items (also noted below in the deliverables) and fill in the evidence</li><ol><li>Periodically add/commit; recommended after each solved item or every few items</li></ol><li>Save and copy/download the markdown</li><li>Create a new file mp1-submission.md in the MP1 folder</li><li>Add the markdown content</li><li>add/commit/push all the pending files for this assignment (tracker.py and mp1-submission.md)</li><li>If everything looks good on the pull request complete the merge</li><li>Create a new pull request from dev to prod and merge it to update prod (not used yet but you want to keep this up to date)</li><li>checkout dev locally and pull the changes to be up to date</li><li>Navigate to the prod branch on github and find the mp1-submission.md file and get the link to the file to submit to canvas</li></ol></td></tr></table>
 <table><tr><td> <em>Deliverable 1: </em> Add Task Logic </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707773-e6aef7cb-d5b2-4053-bbb1-b09fc609041e.png"></td></tr>
@@ -110,7 +110,7 @@
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of get_overdue_tasks()</td></tr>
 <tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221332540-82ab1826-4b64-47cd-afcc-1debb3ae918c.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>tasks 2 to 11 are overdue with mentioned values <br></p>
+<tr><td> <em>Caption:</em> <p>tasks 1,2,3  are overdue from the list <br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Briefly explain the solutions to the checklist items for get_overdue_tasks()</td></tr>
@@ -124,7 +124,7 @@
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add screenshot(s) showing the success/failure of get_time_remaining()</td></tr>
 <tr><td><table><tr><td><img width="768px" src="https://user-images.githubusercontent.com/123990668/221334399-ac278354-e617-4dd7-9ef8-6a86edab9467.png"/></td></tr>
-<tr><td> <em>Caption:</em> <p>the time remaining for task 3 from the list is Over due by:<br>1 days, 18 hours, 20 minutes, 31 seconds and also failure when invalid<br>index is given as input.<br></p>
+<tr><td> <em>Caption:</em> <p>the time remaining for task 1 from the list is Over due by:<br>13days, 10 hours, 29 minutes, 31 seconds and also failure when invalid index<br>is given as input.<br></p>
 </td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 3: </em> Briefly explain the solutions to the checklist items for get_time_remaining()</td></tr>
