@@ -26,6 +26,7 @@ def test_number_mul_number():
     },]
     for d in data:
         assert calc.multiplication(d["b1"], d["b2"]) == int(d["res"])
+        #UCID:vc435; Date:02/27/23
         #checks if the arguments b1 and b2 can perform multiplication function
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res"
@@ -51,6 +52,7 @@ def test_ans_mul_number():
     },]
     for d in data:
         assert calc.multiplication(d["b1"], d["b2"]) == int(d["res"])
+        #UCID:vc435; Date:02/27/23
         #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res" and the output of b1 amd b2 which is "res" is taken as input value for b1.
@@ -81,6 +83,7 @@ def test_number_div_number():
     },]
     for d in data:
         assert calc.division(d["b1"], d["b2"]) == float(d["res"])
+        #UCID:vc435; Date:02/27/23
         #checks if the arguments b1 and b2 can perform division function
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res"
@@ -105,6 +108,7 @@ def test_ans_div_number():
     },]
     for d in data:
         assert calc.division(d["b1"], d["b2"]) == float(d["res"])
+        #UCID:vc435; Date:02/27/23
          #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res" and the output of b1 amd b2 which is "res" is taken as input value for b1.
@@ -136,6 +140,7 @@ def test_number_sub_number():
     },]
     for d in data:
         assert calc.subtraction(d["b1"], d["b2"]) == int(d["res"])
+        #UCID:vc435; Date:02/27/23
         #checks if the arguments b1 and b2 can perform subtraction function
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res"
@@ -143,23 +148,24 @@ def test_number_sub_number():
 def test_ans_sub_number():
     calc = MyCalc()
     data = [{
-        "b1": "5",
+        "b1": "8",
         "b2": "2",
-        "res": "3"
+        "res": "6"
     },
         {
         "b1": "ans",
-        "b2": "5",
-        "res": "-2"
+        "b2": "1",
+        "res": "5"
     },
         {
         "b1": "ans",
         "b2": "2",
-        "res": "0"
+        "res": ""
     },]
     for d in data:
         assert calc.subtraction(d["b1"], d["b2"]) == int(d["res"])
-         #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
+        #UCID:vc435; Date:02/27/23
+         #checks if the arguments values b1 and b2 can perform subtraction function by taking the result as input for the next argument b1 value.
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res" and the output of b1 amd b2 which is "res" is taken as input value for b1.
         #given the b2 value the operation is performed and result is again taken as one of the input for the set of operation.
@@ -189,9 +195,10 @@ def test_number_add_number():
     },]
     for d in data:
         assert calc.addition(d["b1"], d["b2"]) == int(d["res"])
-#checks to see if MyCalc(addition )'s function can add two numbers.
-#It loops through a data list, calling the addition function for each argument item on the list.
-#b1 and b2 values are given as input values and the resut is stored in "res"
+        #UCID:vc435; Date:02/27/23
+        #checks to see if MyCalc(addition )'s function can add two numbers.
+        #It loops through a data list, calling the addition function for each argument item on the list.
+        #b1 and b2 values are given as input values and the resut is stored in "res"
 
 def test_ans_add_number():
     calc = MyCalc()
@@ -213,7 +220,8 @@ def test_ans_add_number():
     },]
     for d in data:
         assert calc.addition(d["b1"], d["b2"]) == int(d["res"])
-         #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
+        #UCID:vc435; Date:02/27/23
+        #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res" and the output of b1 amd b2 which is "res" is taken as input value for b1.
         #given the b2 value the operation is performed and result is again taken as one of the input for the set of operation.

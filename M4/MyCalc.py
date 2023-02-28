@@ -52,7 +52,7 @@ class MyCalc:
 # the above logic is when two numbers are given as iput variable the differece of the two numbers is returned.
 # First determines whether b1 is equal to "ans".
 # if b1 is equal to ans, the result of self.subtraction(self.ans, b2) is given back.
-# else b1 is set to self._as_number(n1), and b2 is set to self._as_number(b2).
+# else b1 is set to self._as_number(b1), and b2 is set to self._as_number(b2).
 # b1 value is subtracted from the b2 value.  If b1 is equal to "ans" then the result will be self.subtraction(self.ans, b2) 
 # which is equal to 0.
 # If both values are integers, the result is a negative integer, which is stored in self.ans.
@@ -72,7 +72,7 @@ class MyCalc:
 # if b1 is equal to "ans", it returns self.multiplication(self.ans,b2) oe else it stores both values in variables b1 and b2.
 # furthur multiplies the two values.
 # firstly it checks if it is equal to"ans" and then returns self.multiplication(self.ans, b2) 
-# else it sets n1 and n2 to be an instance of Number.
+# else it sets b1 and b2 to be an instance of Number.
 # finally, the multiplication value is printed.
 
     def division(self, b1, b2):
@@ -110,17 +110,11 @@ if __name__ == '__main__':
                 handled = False
                 for check in checks:
                     if not handled and check in iSTR:
-                        #nums = iSTR.split(check)
-                        # b1 = nums[0].strip()
-                        # # if b1 == 'ans':
-                        # #     n1 = res
-                        # b2 = nums[1].strip()
+                        
                         if "+" in check:
                             nums = iSTR.split("+")
                             res = Calc.addition(nums[0].strip(),nums[1].strip())
-# This first splits the string "+" into individual characters with split() method from String class.
-#Then it uses these characters as indexes for iterating through all items in iSTR list and calculating 
-# how many times addition would be performed on each item with Calc's addition function (Calc).
+
                         elif "/" in check:
                             nums = iSTR.split("/")
                             res = Calc.division(nums[0].strip(),nums[1].strip())
