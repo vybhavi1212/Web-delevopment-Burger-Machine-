@@ -109,7 +109,7 @@ def test_ans_div_number():
     for d in data:
         assert calc.division(d["b1"], d["b2"]) == float(d["res"])
         #UCID:vc435; Date:02/27/23
-         #checks if the arguments values b1 and b2 can perform multiplication function by taking the result as input for the next argument b1 value.
+         #checks if the arguments values b1 and b2 can perform division function by taking the result as input for the next argument b1 value.
         #It loops through a data list, calling the addition function for each argument item on the list.
         #b1 and b2 values are given as input values and the resut is stored in "res" and the output of b1 amd b2 which is "res" is taken as input value for b1.
         #given the b2 value the operation is performed and result is again taken as one of the input for the set of operation.
