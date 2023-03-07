@@ -40,7 +40,7 @@ jobs:
           # email: my.email@example.com
           email: ${{ secrets.HEROKU_EMAIL }}
           
-          # Heroku API key associated with provided user's email.
+          # Heroku API key associated with provided user's email
           # Api Key is available under your Heroku account settings.
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           
