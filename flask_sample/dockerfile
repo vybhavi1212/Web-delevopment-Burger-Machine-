@@ -8,7 +8,7 @@ ENV PORT 8080
 COPY . /src
 WORKDIR /src
 
-# Install Python Requirements
+# Install Python Requirements.
 RUN pip install -r requirements.txt
 
 # Run the web service on container startup. Here we use the gunicorn
