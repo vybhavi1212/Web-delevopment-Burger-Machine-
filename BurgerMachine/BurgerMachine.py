@@ -154,8 +154,14 @@ class BurgerMachine:
         print(f"Current Burger: {','.join([x.name for x in self.inprogress_burger])}")
 
     def calculate_cost(self):
+        total_cost = sum(item.cost for item in self.inprogress_burger)
         # TODO add the calculation expression/logic for the inprogress_burger
-        return 10000
+        return total_cost
+        #UCID: VC435
+        #date: 03/19/23
+
+       #I used a for loop to go over each burger object in the code above.
+       #and I used the sum() method to calculate the cost of each burger object and return the overall cost.
 
     def run(self):
         try:
@@ -188,6 +194,53 @@ class BurgerMachine:
             # quit
             print("Quitting the burger machine")
             sys.exit()
+        #try:
+    # your code here
+        #UCID:vc435
+        # date: 03/19/23
+        except OutOfStockException as e:
+            print(f"{self.currently_selecting} Your choice is sold out. Please select an option from the list..")
+        #OutofStockException: When a user wishes to add a choice from the options
+        #but there isn't a quantity available they can utilize this exception.
+
+        #UCID:vc435
+        # date: 03/19/23
+        except NeedsCleaningException as e:
+            while True:
+                user_input = input("Type 'clean' to clean the machine: ")
+                if user_input.lower() == "clean":
+                    self.clean_machine()
+                    print("Successfully cleaned Machine!.")
+                    break
+                else:
+                    continue
+        #This exception implies that the machine needs to be cleaned in so it can operate properly.  
+        #Till the user provides the proper input to clean the machine, the while loop will remain. 
+        #The program will continue and the loop will be broken if it reads the input correctly.
+
+        #UCID:vc435
+        # date: 03/19/23
+        except InvalidChoiceException as e:
+            print(f"{self.currently_selecting} is not a valid option, so please choose one of the options below.")
+        #When the user selects an item from the options to add to the list
+        #but there aren't enough quantities availability to go around,the OutOfStockException is raised.
+
+        #UCID:vc435
+        # date: 03/19/23
+        except ExceededRemainingChoicesException as e:
+            print(f"{self.currently_selecting} You've reached your max limit; please select the following category..")
+            # move to the next stage/category
+            #ExceededRemainingChoicesException is used if the user's selection for the patties and toppings exceeds "3" options.
+            
+        #UCID:vc435
+        # date: 03/19/23
+        except InvalidPaymentException as e:
+            print("The entered amount is Invalid, please try again.")
+        except:
+            print("Incorrect.")
+            #If the user enters a different amount than what is displayed, the InvalidPaymentException is raised, 
+            # and the user is prompted to try again with the correct amount.
+        #
         # handle OutOfStockException
             # show an appropriate message of what stage/category was out of stock
         # handle NeedsCleaningException
@@ -201,9 +254,6 @@ class BurgerMachine:
             # move to the next stage/category
         # handle InvalidPaymentException
             # show an appropriate message
-        except:
-            # this is a default catch all, follow the steps above
-            print("Something went wrong")
         
         self.run()
 
