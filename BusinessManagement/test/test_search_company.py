@@ -44,6 +44,7 @@ def get_cell_content_by_index(index, table):
 def query_and_get_assert(query, args, target, client, url):
     from ..sql.db import DB
     result = DB.selectAll(query, *args)
+    print("result1-", result)
     if result.status and result.rows:
         n = result.rows[0][target]
         print("db result", n)
@@ -79,7 +80,7 @@ def test_filter_country(client):
 def test_filter_state(client):
     target = "state"
     query = f"SELECT {target} FROM IS601_MP3_Employees e LEFT JOIN IS601_MP3_Companies c ON e.company_id = c.id WHERE {target} = %s LIMIT 10"
-    args = ["NJ"]
+    args = ["AZ"]
     url = f"/company/search?state={args[0]}"
     query_and_get_assert(query=query, args=args, target=target, client=client, url=url)
  

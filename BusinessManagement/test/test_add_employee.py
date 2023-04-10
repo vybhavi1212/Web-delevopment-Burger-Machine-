@@ -14,7 +14,7 @@ def app():
     yield app
     try:
         DB.getDB().autocommit = True
-        DB.delete("DELETE FROM IS601_MP3_Employees WHERE first_name = %s and last_name=%s", "delme","delme")
+        DB.delete("DELETE FROM IS601_MP3_Employees WHERE first_name=%s and last_name=%s", "delme","delme")
         # reset AUTO_INCREMENT value to max id + 1 so test cases don't cause large id gaps
 
         # this needs to run at the end of the other tests
@@ -49,6 +49,7 @@ def test_add_employee(client):
         "last_name": "delme",
         "email": "delme@delme.com"
     }, follow_redirects=True )
+    print(resp)
     assert resp.status_code == 200
     result = DB.selectOne("SELECT id from IS601_MP3_Employees where first_name = %s and last_name = %s LIMIT 1", 'delme', 'delme')
     if result and result.row:

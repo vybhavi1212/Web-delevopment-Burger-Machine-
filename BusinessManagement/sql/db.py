@@ -30,7 +30,7 @@ class DB:
     db = None
     def __runQuery(op, isMany, queryString, args = None):
         response = None
-        #print(f"query {queryString} args {args}")
+        print(f"query {queryString} args {args}")
         try:
             db = DB.getDB()
             cursor = db.cursor(pymysql.cursors.DictCursor)
@@ -113,6 +113,7 @@ class DB:
 
     @staticmethod
     def selectOne(queryString, *args):
+        print(queryString)
         return DB.__runQuery(CRUD.READ, False, queryString, args)
     
     @staticmethod

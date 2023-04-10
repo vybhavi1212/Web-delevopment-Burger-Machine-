@@ -43,6 +43,7 @@ def test_edit_company(client):
         "city": "Testville",
         "zip":"00000"
     }, follow_redirects=True )
+    print("resp - ", resp)
     assert resp.status_code == 200
     resp = client.get("/company/edit?id=-1", follow_redirects=True )
     # print(resp.data)
