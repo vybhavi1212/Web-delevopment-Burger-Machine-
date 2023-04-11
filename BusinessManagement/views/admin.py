@@ -59,10 +59,11 @@ def importCSV():
                 # TODO importcsv-3 extract company data and append to company list 
                 # as a dict only with company data if all is present
                 if row["company_name"] and row["address"] and row["city"] and row["state"] and row["zip"] and row["web"] and row["country"]:
-                   companies.append({"name" : row["company_name"],  "address" :  row["address"], "city" : row["city"], "state" : row["state"], "country" : row["country"],
-                    "zip": row["zip"], "website" : row["web"]})
+                   companies.append({"name" : row["company_name"],  "address" :  row["address"], "city" : row["city"], "state" : row["state"], 
+                    "country" : row["country"],"zip": row["zip"], "website" : row["web"]})
                 if row["first_name"] and row["last_name"] and row["email"] and row["company_name"]:
-                    employees.append({"first_name" : row["first_name"],  "last_name" :  row["last_name"], "email" : row["email"], "company_name" : row["company_name"]})
+                    employees.append({"first_name" : row["first_name"],  "last_name" :  row["last_name"], "email" : row["email"],
+                    "company_name" : row["company_name"]})
                 
                 # TODO importcsv-4 extract employee data and append to employee list 
                 # as a dict only with employee data if all is present

@@ -11,7 +11,7 @@ def search():
 
     query = """SELECT c.id, c.name, c.address, c.city, c.country, c.state, c.zip, c.website, COUNT(e.id) AS employees FROM IS601_MP3_Companies c 
     LEFT JOIN IS601_MP3_Employees e ON e.company_id = c.id WHERE 1=1 """
-    #UCID:vc435;Date:04/08/23
+    #UCID:vc435;Date:04/10/23
     args = []  # <--- add values to replace %s/%(named)s placeholders
     allowed_columns = ["name", "city", "country", "state"]
     allowed_list = [(v, v) for v in allowed_columns]
@@ -23,7 +23,7 @@ def search():
     column = request.args.get('column')
     order = request.args.get('order')
     limit = request.args.get('limit')
-    #UCID:vc435;Date:04/08/23
+    #UCID:vc435;Date:04/10/23
     # TODO search-3 append a LIKE filter for name if provided
     if name:
         query += " AND c.name like %s"
@@ -36,13 +36,13 @@ def search():
     if state:
         query += " AND c.state like %s"
         args.append(f"%{state}%")
-    #UCID:vc435;Date:04/08/23
+    #UCID:vc435;Date:04/10/23
     query += " GROUP BY c.id"
     # TODO search-6 append sorting if column and order are provided and within the allows columsn and allowed order asc,desc
     if column and order:
         if column in allowed_columns and order in ["asc", "desc"]:
             query += f" ORDER BY {column} {order}"
-     #UCID:vc435;Date:04/08/23
+     #UCID:vc435;Date:04/10/23
     # TODO search-7 append limit (default 10) or limit greater than 1 and less than or equal to 100
     # TODO search-8 provide a proper error message if limit isn't a number or if it's out of bounds
     if limit and int(limit) > 0 and int(limit) <= 100:
@@ -50,7 +50,7 @@ def search():
         args.append(int(limit))
     elif limit and (int(limit) <= 0 or int(limit) > 100):
         flash("Enter the limit between 1 and 100", 'warning')
-         #UCID:vc435;Date:04/08/23
+         #UCID:vc435;Date:04/10/23
 
     print("query", query)
     print("args", args)
@@ -68,7 +68,7 @@ def search():
     # do this prior to passing to render_template, but not before otherwise it can break validation
 
     return render_template("list_companies.html", rows=rows, allowed_columns=allowed_list)
-    #UCID:vc435;Date:04/08/23
+    #UCID:vc435;Date:04/10/23
 
 
 @company.route("/add", methods=["GET", "POST"])
@@ -109,7 +109,7 @@ def add():
             has_error = True
             flash("Zipcode is required", "danger")
         website = str(request.form['website'])
-        #UCID:vc435;Date:04/08/23
+        #UCID:vc435;Date:04/10/23
 
         if not has_error:
             try:
@@ -117,7 +117,7 @@ def add():
                 INSERT INTO IS601_MP3_Companies
                 (name, address, city, country, state, zip, website) VALUES(%s, %s, %s, %s, %s, %s, %s)
                 """, name, address, city, country, state, zip, website)  # <-- TODO add-8 add query and add arguments
-                #UCID:vc435;Date:04/08/23
+                #UCID:vc435;Date:04/10/23
                 if result.status:
                     flash("Added Company", "success")
             except Exception as e:
@@ -174,7 +174,7 @@ def edit():
                 has_error = True
                 flash("Zipcode is required", "danger")
             website = str(request.form.get('website') or '')
-            #UCID:vc435;Date:04/08/23
+            #UCID:vc435;Date:04/10/23
 
             if not has_error:
                 try:
@@ -192,7 +192,7 @@ def edit():
                         website = %s
                     WHERE id = %s
                     """, name, address, city, country, state, zip, website, id)
-                                #UCID:vc435;Date:04/08/23
+                                #UCID:vc435;Date:04/10/23
 
                     if result.status:
                         print("updated record")
@@ -201,7 +201,7 @@ def edit():
                     # TODO edit-10 make this user-friendly
                     print(f"{e}")
                     flash(str(e), "danger")
-                    #UCID:vc435;Date:04/08/23
+                    #UCID:vc435;Date:04/10/23
     row = {}
     try:
         # TODO edit-11 fetch the updated data
@@ -209,13 +209,13 @@ def edit():
             "SELECT name, address, city, country, state, zip, website FROM IS601_MP3_Companies WHERE id = %s", id)
         if result.status:
             row = result.row
-    #UCID:vc435;Date:04/08/23
+    #UCID:vc435;Date:04/10/23
     except Exception as e:
         # TODO edit-12 make this user-friendly
         flash(str(e), "danger")
     # TODO edit-13 pass the company data to the render template
     return render_template("edit_company.html", company=row)
-#UCID:vc435;Date:04/08/23
+#UCID:vc435;Date:04/10/23
 
 @company.route("/delete", methods=["GET"])
 def delete():
@@ -227,7 +227,9 @@ def delete():
     # TODO delete-6 if id is missing, flash necessary message and redirect to search
 
     id = request.args.get('id')
-    #UCID:vc435; Date: 04/08/23
+    if not id:
+        flash("id is missing","warning")
+    #UCID:vc435; Date: 04/10/23
     print("printing id:",id)
     args = {**request.args}
     if id:

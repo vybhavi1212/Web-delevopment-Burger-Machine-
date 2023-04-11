@@ -10,7 +10,7 @@ def search():
     # TODO search-1 retrieve employee id as id, first_name, last_name, email, company_id, company_name using a LEFT JOIN
     query = """SELECT e.id, e.first_name, e.last_name, e.email, e.company_id, IF(c.name is not null, c.name,'N/A') AS company_name from 
     IS601_MP3_Employees e LEFT JOIN IS601_MP3_Companies c ON e.company_id = c.id WHERE 1=1"""  
-    #UCID:vc435; DATE:04/08/23 
+    #UCID:vc435; DATE:04/10/23 
     args = []  # <--- add values to replace %s/%(named)s placeholders
     allowed_columns = ["first_name", "last_name", "email", "company_name"]
     allowed_list = [(v, v) for v in allowed_columns]
@@ -23,7 +23,7 @@ def search():
     column = request.args.get('column')
     order = request.args.get('order')
     limit = request.args.get('limit')
-    #UCID:vc435; DATE:04/08/23 
+    #UCID:vc435; DATE:04/10/23 
     # TODO search-3 append like filter for first_name if provided
     if first_name:
         query += " AND e.first_name like %s"
@@ -39,7 +39,7 @@ def search():
     # TODO search-6 append equality filter for company_id if provided
     if company:
         query += f" AND company_id = {company}"
-    #UCID:vc435; DATE:04/08/23 
+    #UCID:vc435; DATE:04/10/23 
     # TODO search-7 append sorting if column and order are provided and within the allowed columns and order options (asc, desc)
     if column and order:
         print(column, order)
@@ -53,7 +53,7 @@ def search():
     # TODO search-9 provide a proper error message if limit isn't a number or if it's out of bounds
     elif limit and (int(limit) <= 0 or int(limit) > 100):
         flash("Enter the limit between 1 and 100", 'warning')
-    #UCID:vc435; DATE:04/08/23 
+    #UCID:vc435; DATE:04/10/23 
  
     print("query", query)
     print("args", args)
@@ -67,10 +67,10 @@ def search():
     # hint: use allowed_columns in template to generate sort dropdown
     # hint2: convert allowed_columns into a list of tuples representing (value, label)
     # do this prior to passing to render_template, but not before otherwise it can break validation
-    #UCID:vc435; Date: 04/08/23
+    #UCID:vc435; Date: 04/10/23
 
     return render_template("list_employees.html", rows=rows, allowed_columns=allowed_list)
-    #UCID:vc435; Date: 04/08/23
+    #UCID:vc435; Date: 04/10/23
  
 @employee.route("/add", methods=["GET", "POST"])
 def add():
@@ -120,7 +120,7 @@ def edit():
     id = request.args.get('id')
     if not id:  # TODO update this for TODO edit-1
         flash("Company ID is missing", "danger")
-        #UCID:vc435; Date: 04/08/23
+        #UCID:vc435; Date: 04/10/23
     else:
         if request.method == "POST":            
             # TODO edit-1 retrieve form data for first_name, last_name, company, email
@@ -145,20 +145,20 @@ def edit():
                 return redirect("add")
             # TODO edit-5a verify email is in the correct format
             has_error = False  # use this to control whether or not an insert occurs
-            #UCID:vc435; Date: 04/08/23
+            #UCID:vc435; Date: 04/10/23
             if not has_error:
                 try:
                     # TODO edit-6 fill in proper update query
                     result = DB.update("""
                     UPDATE IS601_MP3_Employees SET first_name = %s, last_name = %s, company_id = %s, email = %s WHERE id = %s
                     """,first_name,last_name,company_id, email, id)
-                    #UCID:vc435; Date: 04/08/23
+                    #UCID:vc435; Date: 04/10/23
                     if result.status:
                         flash("Updated record", "success")
                 except Exception as e:
                     # TODO edit-7 make this user-friendly
                     flash(f" Following exception occured while updating the employee: {str(e)}", "danger")
-                    #UCID:vc435; Date: 04/08/23
+                    #UCID:vc435; Date: 04/10/23
         row = {}
         try:
             # TODO edit-8 fetch the updated data
@@ -172,7 +172,7 @@ def edit():
             flash(f" Following exception occured while fetching the updated employee record: {str(e)}", "danger")
     # TODO edit-10 pass the employee data to the render template
     return render_template("edit_employee.html", employee=row)
-    #UCID:vc435; Date: 04/08/23
+    #UCID:vc435; Date: 04/10/23
 
 
 @employee.route("/delete", methods=["GET"])
@@ -183,7 +183,9 @@ def delete():
     # TODO delete-4 ensure a flash message shows for successful delete
     # TODO delete-5 if id is missing, flash necessary message and redirect to search
     id = request.args.get("id")
-    #UCID:vc435; Date: 04/08/23
+    if not id:
+        flash("id is missing","warning")
+    #UCID:vc435; Date: 04/10/23
     args = {**request.args}
     if id:
         try:
@@ -196,4 +198,4 @@ def delete():
     flash(f" id is missing", "danger")
     return redirect(url_for("employee.search", **args))
     pass
-    #UCID:vc435; Date: 04/08/23
+    #UCID:vc435; Date: 04/10/23
