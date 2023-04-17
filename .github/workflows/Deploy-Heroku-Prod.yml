@@ -1,6 +1,3 @@
-# Your workflow name.
-name: Deploy to heroku prod.
-
 # Run workflow on every push to master branch.
 
 on:
@@ -17,7 +14,7 @@ jobs:
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       PORT: 8080
       # change to the project directory you're deploying
-      WORKING_DIRECTORY: flask_sample
+      WORKING_DIRECTORY: project
     defaults:
       run:
           working-directory: ${{env.WORKING_DIRECTORY}}
@@ -67,6 +64,5 @@ jobs:
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
           
-   
           
 ### ⬆ IMPORTANT PART ⬆ ###
