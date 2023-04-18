@@ -1,11 +1,14 @@
+# Your workflow name.
+name: Deploy to heroku dev.
+
 # Run workflow on every push to master branch.
 
 on:
   push:
     branches:
-      - prod
+      - dev
       - Milestone1
-      
+
 # Your workflows jobs.
 jobs:
   build:
