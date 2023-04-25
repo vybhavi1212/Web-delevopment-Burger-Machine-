@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - dev
-      - Milestone1
+      - Milestone2
 
 # Your workflows jobs.
 jobs:
@@ -15,10 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DB_URL: ${{secrets.DB_URL}}
-      SECRET_KEY: ${{secrets.SECRET_KEY}}
       PORT: 8080
       # change to the project directory you're deploying
-      WORKING_DIRECTORY: project
+      WORKING_DIRECTORY: project-1
     defaults:
       run:
           working-directory: ${{env.WORKING_DIRECTORY}}
@@ -68,5 +67,6 @@ jobs:
           # For more information look at https://devcenter.heroku.com/articles/process-model
           process_type: web
           
+   
           
 ### ⬆ IMPORTANT PART ⬆ ###
